@@ -10,95 +10,99 @@ body{
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background-color: #101214;
+    background-color:rgb(255,255,255);
     color: #7A7C80;
 
 }
-
+.header {
+    padding: 15px; /* some padding */
+    text-align: center; /* center the text */
+    background:rgb(255,255,255); /* green background */
+    color:  #7A7C80; /* white text color */
+    border-style:inset;
+  }
+  
+  /* Increase the font size of the <h1> element */
+  .header h1 {
+    font-size: 40px;
+  }
 h2,.white{
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
 
+/* Style the top navigation bar */
+.navbar {
+  overflow: hidden; /* Hide overflow */
+  background-color: rgb(58, 52, 52); /* Dark background color */
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  float: left; /* Make sure that the links stay side-by-side */
+  display: block; /* Change the display to block, for responsive reasons (see below) */
+  color: white; /* White text color */
+  text-align: center; /* Center the text */
+  padding: 14px 20px; /* Add some padding */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Right-aligned link */
+.navbar a.right {
+  float: right; /* Float a link to the right */
+}
+
+/* Change color on hover/mouse-over */
+.navbar a:hover {
+  background-color: #ddd; /* Grey background color */
+  color: black; /* Black text color */
+}
+/* Ensure proper sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Column container */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  text-align: center;
+  flex: 25%; /* Set the width of the sidebar */
+  background-color: #f1f1f1; /* Grey background color */
+  padding: 30px; /* Some padding */
+}
+
+/* Main column */
+.main {
+  flex: 75%; /* Set the width of the main content */
+  background-color: white; /* White background color */
+  padding: 30px; /* Some padding */
+}
 a{
     color: #7A7C80;
     text-decoration: none;
 }
-/* section 1 */
-.section-1{
-    padding-top: 40vh;
-    text-align: center;
-}
 
-.section-1 p{
-    font-size: 1.1rem;
-    padding-bottom: 10px;
-    margin:0;
-}
+img {
+    width: 35%;
+    height: 32%;
+  }
 
-.section-1 h2{
-    font-size: 1.7rem;
-    margin-bottom: 10px;
-}
-
-.section-1 a{
-    font-size: 1.5rem;
-    padding: 10px;
-}
-/* section 2 */
-.section-2{
-    padding-top: 10vh;
-    width: 70%;
-}
-
-.section-2 h2{
-    font-size: 1.7rem;
-    margin-bottom: 10px;
-}
-
-.section-2 p{
-    font-size: 1.1rem;
-    padding-bottom: 10px;
-    margin:0;
-}
-
-.section-2 a{
-    display: block;
-    padding: 5px;
-    font-size: 1.2rem;
-    padding-left: 0;
-    width: 100px;
-}
-/* animations / utilities */
-.section-2 a:hover{
-    font-size: 1.3rem;
-    color: #fff;
-    cursor: pointer;
-    transition: 0.2s;
-}
-
-.section-1 a:hover{
-    color: #fff;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.white:hover{
-    position: relative;
-    padding-left: 10px;
-}
-
-/* media queres */
-@media(max-width:780px){
-    .grid-2{
-        grid-template-columns: 1fr;
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+    .row {
+      flex-direction: column;
     }
-    .section-1{
-        padding:0;
-        padding-top: 5rem;
+  }
+  
+  /* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+  @media screen and (max-width: 400px) {
+    .navbar a {
+      float: none;
+      width: 100%;
     }
-    .section-2{
-        padding: 0;
-        padding-left: 1.5rem;
-        padding-top: 2rem;
-    }
-}
+  }
